@@ -1,0 +1,7 @@
+---
+- name: Running Ansible Playboook
+  hosts: servers
+  tasks:
+    - name: Deploying Kubernetes
+      command: kubectl apply -f flaskapp_deployment.yaml
+      become: yes
